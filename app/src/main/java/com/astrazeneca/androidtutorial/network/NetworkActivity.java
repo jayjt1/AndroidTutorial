@@ -16,11 +16,11 @@ import com.astrazeneca.androidtutorial.network.model.DummyData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class NetworkActivity extends AppCompatActivity implements  View.OnClickListener {
 
     String TAG = NetworkActivity.class.getSimpleName();
-
     Button btnFetch;
     TextView txtTitle;
 
@@ -29,12 +29,9 @@ public class NetworkActivity extends AppCompatActivity implements  View.OnClickL
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_network);
-
         txtTitle = (TextView) findViewById(R.id.txtTitle);
         btnFetch = (Button) findViewById(R.id.btnFetch);
-
         btnFetch.setOnClickListener(this);
-
         Log.d(TAG, "onCreate is Called");
     }
 
@@ -43,28 +40,23 @@ public class NetworkActivity extends AppCompatActivity implements  View.OnClickL
 
         if(view.getId() == R.id.btnFetch) {
 
-            ApiService apiService = NetworkApi.getClient().create(ApiService.class);
+            Retrofit mRetrofit = NetworkApi.getClient();
+            ApiService apiService = mRetrofit.create(ApiService.class);
 
-            Call<DummyData> dummyData = apiService.getDOTOData();
-
-            dummyData.enqueue(new Callback<DummyData>() {
+            apiService.getDOTOData().enqueue(new Callback<DummyData>() {
                 @Override
                 public void onResponse(Call<DummyData> call, Response<DummyData> response) {
+
                     Log.d("Response getTitle",response.body().getTitle());
                     Log.d("Response getId","" + response.body().getId());
                     Log.d("Response getUserid","" + response.body().getUserid());
                     Log.d("Response isCompleted","" + response.body().isCompleted());
-
                     txtTitle.setText(response.body().getTitle());
                 }
-
                 @Override
                 public void onFailure(Call<DummyData> call, Throwable t) {
-
                 }
             });
-
         }
-
     }
 }

@@ -3,7 +3,8 @@
     package="com.astrazeneca.androidtutorial">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".screens.LoginActivity">
+        <activity android:name=".services.ServiceActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +23,19 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".FirstActivity">
+        </activity>
+
         <activity android:name=".SecondActivity">
         </activity>
+
+        <service
+            android:name=".services.MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+        android:exported="true"/>
+
+        <service
+            android:name=".services.MyService"/>
 
     </application>
 

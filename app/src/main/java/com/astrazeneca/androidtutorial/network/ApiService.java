@@ -7,6 +7,8 @@ import retrofit2.http.GET;
 
 public interface ApiService {
 
+//    https://jsonplaceholder.typicode.com/todos/1
+
     @GET("todos/1")
     Call<DummyData> getDOTOData();
 }
