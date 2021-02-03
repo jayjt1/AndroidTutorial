@@ -2,5 +2,7 @@
     <string name="app_name">AndroidTutorial</string>
 
     <string name="signUp"><i>SignUp</i></string>
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+
 
 </resources>

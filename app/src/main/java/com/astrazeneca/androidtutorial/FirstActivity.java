@@ -31,6 +31,9 @@ public class FirstActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent nextIntent = new Intent(FirstActivity.this, SecondActivity.class);
+                nextIntent.putExtra("Key", "Hello Android");
+                startActivity(nextIntent);
 
                 String url = "http://google.co.in/";
                 Intent i = new Intent(Intent.ACTION_VIEW);

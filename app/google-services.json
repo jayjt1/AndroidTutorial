@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "516075831112",
+    "project_id": "androidtutorial-90ee1",
+    "storage_bucket": "androidtutorial-90ee1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516075831112:android:449ca9dd06264f393dfd7d",
+        "android_client_info": {
+          "package_name": "com.astrazeneca.androidtutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516075831112-70qpl0laffu2rcl2p16cmvi6b72j0vrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.astrazeneca.androidtutorial",
+            "certificate_hash": "c6d84f83b7d4fe21f7256e15fc78b862786d7662"
+          }
+        },
+        {
+          "client_id": "516075831112-tc976lfiqpqq5i7u2mlghb594q9u1mbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyT1TjRlxG8xu4X7UOzlTiSmmk82aWDLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516075831112-tc976lfiqpqq5i7u2mlghb594q9u1mbc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
