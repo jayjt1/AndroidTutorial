@@ -83,9 +83,8 @@ public class FirebaseDatabaseActivity extends AppCompatActivity implements View.
 
             company.enqueue(new Callback<Company>() {
                 @Override
-                public void onResponse(Call<T> call, Response<Company> response) {
+                public void onResponse(Call<Company> call, Response<Company> response) {
 
-                    response.message().equals("User")
                     if (response.isSuccessful()) {
 
                         Log.d(TAG, "Company :" + response.body().getCompany());
