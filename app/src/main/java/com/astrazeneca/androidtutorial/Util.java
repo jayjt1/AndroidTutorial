@@ -8,6 +8,8 @@ public class Util {
     static ProgressDialog progressDialog;
 
     public static final String ROOTURL = "https://jsonplaceholder.typicode.com/";
+    public static final String FIREBASE_ROOTURL = "https://firebasestorage.googleapis.com/";
+
 
     public static  void showLoader(Context mContext) {
 

@@ -33,7 +33,7 @@ public class NetworkApi {
             builder.addInterceptor(logging);
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl(Util.ROOTURL)
+                    .baseUrl(Util.FIREBASE_ROOTURL)
                     .client(builder.build())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
