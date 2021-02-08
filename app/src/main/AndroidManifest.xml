@@ -3,6 +3,8 @@
     package="com.astrazeneca.androidtutorial">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -14,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".firebase.FirebaseDatabaseActivity">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+
+        <activity android:name=".maps.GoogleMapsActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +55,10 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD2fht2eZyUMlRopdAtwJ138jnNfE_Rckg"/>
 
 
     </application>
