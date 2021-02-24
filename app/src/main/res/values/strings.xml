@@ -3,6 +3,8 @@
 
     <string name="signUp"><i>SignUp</i></string>
     <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+    <string name="default_notification_channel_id">Default</string>
+    <string name="default_notification_general">General announcements</string>
 
-
+    General announcements
 </resources>
